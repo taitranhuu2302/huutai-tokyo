@@ -5,7 +5,8 @@
     nav {
         .breadcrumb {
             li {
-                font-size: 20px;
+                font-size: 15px;
+                white-space: nowrap;
                 a {
                     color: #999;
                 }
@@ -19,6 +20,9 @@
         }
     }
     .table {
+        th {
+            white-space: nowrap;
+        }
         #list-item {
             .item {
                 .img {
@@ -27,9 +31,7 @@
                         height: 100%;
                     }
                 }
-                .name-product {
-                    white-space: nowrap;
-                }
+                .name-product {}
                 .quantity {
                     position: relative;
                     width: 36px;
@@ -80,4 +82,10 @@
 #header #header-sticky .header-mid .header-mid-cart .login::after,
 #header #header-sticky .header-mid .header-mid-cart .logged::after {
     display: none;
+}
+
+@media (max-width: 991.98px) {
+    #content {
+        margin-top: 101px;
+    }
 }

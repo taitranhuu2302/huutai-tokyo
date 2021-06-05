@@ -77,22 +77,25 @@ quantity();
 autoRender = () => {
   var htmls = listCart.map((listCart, index) => {
     return `
-      <tr class="item align-middle text-center">
-          <td scope="row">${index + 1}</td>
-          <td class="img text-start">
+      <tr class="item align-middle">
+          <td scope="row" class="d-none d-md-table-cell">${index + 1}</td>
+          <td class="img ">
               <img src="${listCart.image}" class="img-src img-fluid" alt="">
-              <span class="ms-3 name-product">${listCart.name}</span>
+              
           </td>
-          <td>
+          <td class="text-center">
+            <span class="ms-3 name-product">${listCart.name}</span>
+          </td>
+          <td  class="d-none d-md-table-cell">
               $<span class="price-first">${listCart.price}</span>
           </td>
-          <td>
+          <td class="text-center">
               <input type="number" class="quantity shadow-none" value="1">
           </td>
-          <td>
+          <td class="d-none d-md-table-cell">
               $<span class="price"></span>
           </td>
-          <td>
+          <td  class="d-none d-md-table-cell">
               <button class="btn btn-remove border btn-danger">
                   Remove
               </button>
@@ -224,7 +227,7 @@ $(() => {
     var payments = $(".form-check-input:checked").val()
       ? $(".form-check-input:checked").val()
       : "Trả tiền mặt khi nhận hàng";
-    if (!fullname || !address || !city || !email || !phone || !note) {
+    if (!fullname || !address || !city || !email || !phone) {
       Swal.fire({
         position: "center",
         icon: "warning",

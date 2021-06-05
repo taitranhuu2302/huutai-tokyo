@@ -71,8 +71,8 @@
                                 </div>
                             </div>
                             <div class="col col-lg-3 col-sm-3 header-mid-cart d-flex align-items-center justify-content-end justify-content-lg-between justify-content-sm-end me-3 me-xl-0">
-                                <button type="button" class="btn login" data-bs-toggle="modal" data-bs-target="#modal-login">Đăng nhập</button>
-                                <button type="button" class="btn d-none" id="icon-cart">
+                                <button type="button" class="btn login d-none d-lg-block " data-bs-toggle="modal" data-bs-target="#modal-login">Đăng nhập</button>
+                                <button type="button" class="btn" id="icon-cart">
                                     <i class="fas fa-shopping-bag"></i>
                                     <p class="tag-cart d-flex justify-content-center align-items-center rounded-circle">
                                         <span id="tag-cart-amount"></span>
@@ -232,21 +232,20 @@
                         <table class="table">
                             <thead>
                                 <tr class="text-center">
-                                    <th scope="col">STT</th>
-                                    <th scope="col">SẢN PHẨM</th>
-                                    <th scope="col">GIÁ</th>
+                                    <th scope="col" class="d-none d-md-table-cell">STT</th>
+                                    <th scope="col" colspan="2">SẢN PHẨM</th>
+                                    <th scope="col" class="d-none d-md-table-cell">GIÁ</th>
                                     <th scope="col">SỐ LƯỢNG</th>
-                                    <th scope="col">TẠM TÍNH</th>
+                                    <th scope="col" class="d-none d-md-table-cell">TẠM TÍNH</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody id="list-item">
-
                             </tbody>
                         </table>
                     </div>
                     <div class="col-12 col-lg-4">
-                        <div class="row title align-middle text-center mt-2">
+                        <div class="row title align-middle text-center mt-5 mt-lg-2">
                             <h6 class="text-uppercase" style="font-size: 18px;">Cộng giỏ hàng</h6>
                             <hr class="mt-1" style="height: 3px;">
                         </div>
@@ -316,7 +315,7 @@
                     </div>
                 </div>
                 <div class="row row-item checkout-detail d-none px-5">
-                    <div class="col-7 left">
+                    <div class="col-12 col-lg-7 left">
                         <div class="title text-uppercase fw-bold fs-3">
                             Thông tin thanh toán
                         </div>
@@ -410,7 +409,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-5 border py-3 px-5 right">
+                    <div class="col-12 col-lg-5 border my-5 mt-lg-0 py-3 px-5 right">
                         <div class="fw-bold text-uppercase fs-2">
                             Đơn hàng của bạn
                         </div>
@@ -486,7 +485,7 @@
                 <div class="row row-item order-compelete  d-none">
                     <div class="col-12 text-center">
                         <b class="display-3 fw-bold">Xin chào <span class="name-customer">Tai</span></b>
-                        <p class="fs-2">Cảm ơn bạn đã mua hàng từ TonycongCity</p>
+                        <p class="fs-2 mt-3">Cảm ơn bạn đã mua hàng từ TonycongCity</p>
                     </div>
                     <div class="col-12 mt-5 px-5 infomation">
                         <div class="title fs-4 fw-bold">
@@ -494,25 +493,25 @@
                         </div>
                         <hr>
                         <div class="row info-content">
-                            <div class="col-6 mt-3">
+                            <div class="col-12 col-md-6 mt-3">
                                 Họ và tên: <span class="name-customer"></span>
                             </div>
-                            <div class="col-6 mt-3">
+                            <div class="col-12 col-md-6 mt-3">
                                 Email: <span class="email-customer"></span>
                             </div>
-                            <div class="col-6 mt-3">
+                            <div class="col-12 col-md-6 mt-3">
                                 Địa chỉ: <span class="address-customer"></span>
                             </div>
-                            <div class="col-6 mt-3">
+                            <div class="col-12 col-md-6 mt-3">
                                 Tỉnh thành: <span class="city-customer"></span>
                             </div>
-                            <div class="col-6 mt-3">
+                            <div class="col-12 col-md-6 mt-3">
                                 Số điện thoại: <span class="phone-customer"></span>
                             </div>
-                            <div class="col-6 mt-3">
+                            <div class="col-12 col-md-6 mt-3">
                                 Hình thức thanh toán: <span class="payments-customer"></span>
                             </div>
-                            <div class="col-6 mt-3">
+                            <div class="col-12 col-md-6 mt-3">
                                 Ghi chú: <span class="note-customer"></span>
                             </div>
                         </div>
@@ -535,7 +534,7 @@
                                 <th></th>
                                 <th></th>
                                 <th>Tổng tiền: </th>
-                                <td>$ <span class="total-all">220</span></td>
+                                <td class="text-nowrap">$ <span class="total-all">220</span></td>
                             </tr>
                         </table>
                         <div class="row mt-5">

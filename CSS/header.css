@@ -83,7 +83,6 @@
   z-index: 100;
   -webkit-transition: top 0.5s linear;
   transition: top 0.5s linear;
-  height: 168px;
 }
 
 #header #header-sticky .header-mid {

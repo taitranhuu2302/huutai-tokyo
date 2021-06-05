@@ -1,0 +1,80 @@
+#content {
+  margin-top: 168px;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+#content nav .breadcrumb li {
+  font-size: 20px;
+}
+
+#content nav .breadcrumb li a {
+  color: #999;
+}
+
+#content nav .breadcrumb .active {
+  font-weight: bold;
+}
+
+#content nav .breadcrumb .active a {
+  color: #000;
+}
+
+#content .table #list-item .item .img {
+  height: 120px;
+}
+
+#content .table #list-item .item .img img {
+  height: 100%;
+}
+
+#content .table #list-item .item .name-product {
+  white-space: nowrap;
+}
+
+#content .table #list-item .item .quantity {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+#content .input-sale {
+  height: 38px;
+  outline: none;
+}
+
+#content button {
+  font-size: 16px;
+}
+
+#content .checkout-detail .form-control {
+  margin-top: 10px;
+  height: 34px;
+  font-size: 16px;
+}
+
+#content #list-icon1 .icons .icon {
+  margin-right: 10px;
+  width: 50px;
+  height: 31px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#content #list-icon1 .icons .icon svg {
+  background-color: #0005;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  fill: white;
+}
+
+#content #list-icon1 .icons .icon:hover svg {
+  fill: #000;
+}
+
+#header #header-sticky .header-mid .header-mid-cart .login::after,
+#header #header-sticky .header-mid .header-mid-cart .logged::after {
+  display: none;
+}
+/*# sourceMappingURL=cart.css.map */

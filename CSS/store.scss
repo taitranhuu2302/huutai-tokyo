@@ -1,0 +1,155 @@
+#banner {
+    margin-top: 168px;
+    height: 397px;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    .banner-effect {
+        width: 100%;
+        height: 100%;
+        background: url(../Image/bannerStore2.png), url(../Image/bannerStore1.png);
+        // z-index: 1;
+        animation: snow2 10s linear infinite;
+    }
+    .banner-content {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 75px;
+        .title {
+            font-size: 60px;
+        }
+        button {
+            background-color: white;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+
+.body-1 {
+    .body-1-title {
+        .breadcrumb {
+            &-item {
+                color: black;
+                font-size: 18px;
+                a {
+                    text-decoration: none;
+                    color: #999;
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .filter {
+            &-caption {
+                font-size: 16px;
+                white-space: nowrap;
+            }
+            .form-group {
+                position: relative;
+                #my-select {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .body-1-content {
+        .content-left {
+            .filter {
+                .around-price {
+                    input {
+                        width: 100px;
+                        height: 30px;
+                        font-size: 16px;
+                        &::placeholder {
+                            font-size: 16px;
+                            color: #cdcdcd;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .connect {
+                        width: 20px;
+                        height: 1px;
+                        background-color: #999;
+                    }
+                }
+            }
+            .content-left-title {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 50px;
+                    height: 4px;
+                    left: 8px;
+                    bottom: -9px;
+                    background-color: #cdcdcd;
+                }
+            }
+            .content-left-item {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 90%;
+                    height: 1px;
+                    bottom: -7px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #cdcdcd;
+                }
+                &:last-child::after {
+                    display: none;
+                }
+                .left-item-caption {
+                    .name-product {
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: #333;
+                        font-weight: 500;
+                    }
+                    s,
+                    b {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .content-right {
+            #product-items {
+                min-height: 450px;
+            }
+        }
+    }
+}
+
+@keyframes snow2 {
+    0% {
+        background-position: bottom left;
+    }
+    50% {
+        background-position: center center;
+    }
+    100% {
+        background-position: top right;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #banner {
+        margin-top: 101px;
+        .banner-content {
+            .title {
+                font-size: 36px;
+                white-space: nowrap;
+            }
+        }
+    }
+}

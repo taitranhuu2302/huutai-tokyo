@@ -1,0 +1,344 @@
+.wrapper-banner {
+  margin-top: 168px;
+}
+
+.wrapper-banner .banner {
+  height: 544px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../Image/banner.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Image/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.wrapper-banner .banner .banner-title {
+  z-index: 2;
+}
+
+.wrapper-banner .banner .banner-title p:nth-child(1) {
+  font-size: 18px;
+}
+
+.wrapper-banner .banner .banner-title p:nth-child(2) {
+  font-size: 47px;
+}
+
+.wrapper-banner .banner .banner-title p:nth-child(3) {
+  font-size: 16px;
+  color: #e0dddd;
+}
+
+.wrapper-banner .banner .banner-btn {
+  z-index: 2;
+}
+
+.wrapper-banner .banner .banner-btn button:first-child {
+  color: #fff;
+  font-size: 22px;
+  background-color: black;
+  border-radius: 2px;
+  padding: 8px 30px;
+}
+
+.wrapper-banner .banner .banner-btn button:last-child {
+  color: #8a8a8a;
+  font-size: 22px;
+  background-color: white;
+  border-radius: 2px;
+  padding: 8px 30px;
+}
+
+.wrapper-banner .banner .banner-btn button:last-child:hover {
+  background-color: #d1d1d1;
+}
+
+.wrapper-banner .banner #down-scroll {
+  position: absolute;
+  font-size: 50px;
+  color: #999;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+#product-selling .product-title div:nth-child(1), #product-selling .product-title div:nth-child(3),
+#product-portfolio .product-title div:nth-child(1),
+#product-portfolio .product-title div:nth-child(3),
+#experience .product-title div:nth-child(1),
+#experience .product-title div:nth-child(3) {
+  height: 2px;
+  background-color: #d1cccc;
+}
+
+#product-selling .product-title div:nth-child(2),
+#product-portfolio .product-title div:nth-child(2),
+#experience .product-title div:nth-child(2) {
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+}
+
+#product-selling #product-items .product-item:hover .item-img .img,
+#product-portfolio #product-items .product-item:hover .item-img .img,
+#experience #product-items .product-item:hover .item-img .img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+}
+
+#product-selling #product-items .product-item .item-caption .caption-title .price .price-product,
+#product-selling #product-items .product-item .item-caption .caption-title .price .icon-dollar,
+#product-portfolio #product-items .product-item .item-caption .caption-title .price .price-product,
+#product-portfolio #product-items .product-item .item-caption .caption-title .price .icon-dollar,
+#experience #product-items .product-item .item-caption .caption-title .price .price-product,
+#experience #product-items .product-item .item-caption .caption-title .price .icon-dollar {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#product-portfolio .portfolio-items {
+  height: 330px;
+  position: relative;
+}
+
+#product-portfolio .portfolio-items .portfolio-item {
+  text-decoration: none;
+  color: #333;
+  height: 330px;
+}
+
+#product-portfolio .portfolio-items .portfolio-item .portfolio-item-img {
+  height: 246px;
+}
+
+#product-portfolio .portfolio-items .portfolio-item .portfolio-item-img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#product-portfolio .portfolio-items .portfolio-item .portfolio-item-caption {
+  text-transform: uppercase;
+}
+
+#product-portfolio .portfolio-items .portfolio-item .portfolio-item-caption h4 {
+  font-size: 17px;
+}
+
+#product-portfolio .portfolio-items .portfolio-item .portfolio-item-caption p {
+  font-size: 13px;
+}
+
+#product-portfolio .portfolio-items .owl-nav {
+  margin: 0;
+  padding: 0;
+}
+
+#product-portfolio .portfolio-items .owl-nav .owl-next,
+#product-portfolio .portfolio-items .owl-nav .owl-prev {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#product-portfolio .portfolio-items .owl-nav .owl-next:hover,
+#product-portfolio .portfolio-items .owl-nav .owl-prev:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+#product-portfolio .portfolio-items .owl-nav .owl-next span,
+#product-portfolio .portfolio-items .owl-nav .owl-prev span {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#product-portfolio .portfolio-items .owl-nav .owl-next {
+  right: 0;
+}
+
+#product-portfolio .portfolio-items .owl-nav .owl-prev {
+  left: 0;
+}
+
+#portfolio-customer {
+  margin-bottom: 50px;
+  background-color: black;
+  height: 620px;
+  padding: 80px 0;
+}
+
+#portfolio-customer .portfolio-item {
+  margin-bottom: 20px;
+}
+
+#portfolio-customer .portfolio-customer-items .portfolio-customer-item .item {
+  background-color: #fff;
+}
+
+#portfolio-customer .portfolio-customer-items .portfolio-customer-item .item .img {
+  width: 82px;
+}
+
+#portfolio-customer .portfolio-customer-items .portfolio-customer-item .item .voted {
+  font-size: 15px;
+}
+
+#portfolio-customer .portfolio-customer-items .portfolio-customer-item .item .comment {
+  font-size: 16px;
+}
+
+#experience .experience-slides {
+  height: 307px;
+}
+
+#experience .experience-slides .slide-item {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  width: 329px;
+}
+
+#experience .experience-slides .slide-item .img {
+  width: 100%;
+  height: 185px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#experience .experience-slides .slide-item .slide-item-title b {
+  font-size: 17px;
+}
+
+#experience .experience-slides .owl-nav {
+  margin: 0;
+  padding: 0;
+}
+
+#experience .experience-slides .owl-nav .owl-next,
+#experience .experience-slides .owl-nav .owl-prev {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#experience .experience-slides .owl-nav .owl-next:hover,
+#experience .experience-slides .owl-nav .owl-prev:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#experience .experience-slides .owl-nav .owl-next span,
+#experience .experience-slides .owl-nav .owl-prev span {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#experience .experience-slides .owl-nav .owl-next {
+  right: 0;
+}
+
+#experience .experience-slides .owl-nav .owl-prev {
+  left: 0;
+}
+
+.banner-items .banner-item {
+  height: 180px;
+  border: 10px solid black;
+  position: relative;
+}
+
+.banner-items .banner-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.banner-items .banner-item .snow {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+  background: url(../Image/snow1.png), url(../Image/snow2.png);
+  overflow: hidden;
+  -webkit-animation: snow 10s linear infinite;
+          animation: snow 10s linear infinite;
+}
+
+.banner-items .banner-item .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.banner-items .banner-item .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.banner-items .banner-item .content .content-title {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner-items .banner-item .content .content-title h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.banner-items .banner-item .content .content-title p {
+  font-size: 17px;
+}
+
+@media (max-width: 991.98px) {
+  #bannerTop {
+    margin-top: 101px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

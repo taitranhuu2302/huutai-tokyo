@@ -68,6 +68,8 @@
                                 <div class="form-group">
                                     <input id="my-search" class="form-control" type="text" name="" placeholder="Tìm kiếm điện thoại, máy tính">
                                     <button class="btn btn-search"><i class="far fa-search"></i></button>
+                                    <div class="list-group tab-search">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col col-lg-3 col-sm-3 header-mid-cart d-flex align-items-center justify-content-end justify-content-lg-between justify-content-sm-end me-3 me-xl-0">
@@ -223,129 +225,132 @@
             <div class="banner-effect"></div>
         </div>
         <!-- Banner End -->
-        <div class="container mt-5 body-1">
-            <div class="row body-1-title">
-                <div class="col-12 col-md-6">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                            <li class="breadcrumb-item active fw-bold" aria-current="page">Cửa hàng</li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="filter d-flex justify-content-end align-items-center">
-                        <div class="filter-caption">
-                            Hiển thị 1-12 của 12 kết quả
-                        </div>
-                        <div class="form-group ms-5">
-                            <select id="my-select" class="form-select" name="">
-                                <option class="select-1" value="select-1">Thứ tự mặc định</option>
-                                <option class="select-2" value="select-2">Thứ tự theo mực độ phổ biến</option>
-                                <option class="select-3" value="select-3">Thứ tự theo điểm đánh giá</option>
-                                <option class="select-4" value="select-4">Mới nhất</option>
-                                <option class="select-5" value="select-5">Thứ tự theo giá: từ cao xuống thấp</option>
-                                <option class="select-6" value="select-6">Thứ tự theo giá: từ thấp đến cao</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5 body-1-content">
-                <div class="col-lg-3 col-12 content-left">
-                    <div class="row filter my-4">
-                        <div class="col-12 mb-4 content-left-title fw-bold fs-4 text-dark text-uppercase">Lọc theo giá
-                        </div>
-                        <div class="around-price my-3 d-flex align-items-center">
-                            <input type="text" class="value value-min w-100" placeholder="$0">
-                            <div class="connect mx-4"></div>
-                            <input type="text" class="value value-max w-100" placeholder="$1000">
-                        </div>
-                        <div>
-                            <button type="submit" class="btn-filter btn bg-dark text-white fs-4 fw-bold w-25">Lọc</button>
-                        </div>
-                    </div>
-                    <div class="row d-lg-block d-none">
-                        <div class="col-12 mb-4 content-left-title fw-bold fs-4 text-dark text-uppercase">Sản phẩm giảm giá
-                        </div>
-                        <div class="col-12 mb-4 content-left-item">
-                            <div class="row">
-                                <div class="col-3">
-                                    <a href="./product/headphone.html"> <img src="./Image/1.jpg" class="w-100 img-fluid" alt=""></a>
-                                </div>
-                                <div class="col-8">
-                                    <div class="left-item-caption">
-                                        <a href="./product/headphone.html" class="name-product">Tai nghe Samsung</a>
-                                        <br>
-                                        <s class="me-3">$100</s>
-                                        <b>$65.32</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-4 content-left-item">
-                            <div class="row">
-                                <div class="col-3">
-                                    <a href=""> <img src="./Image/2.jpg" class="w-100 img-fluid" alt=""></a>
-                                </div>
-                                <div class="col-8">
-                                    <div class="left-item-caption">
-                                        <a href="" class="name-product">Samsung Galaxy Watch</a>
-                                        <br>
-                                        <s class="me-3">$100</s>
-                                        <b>$92.3</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-4 content-left-item">
-                            <div class="row">
-                                <div class="col-3">
-                                    <a href=""> <img src="./Image/3.jpg" class="w-100 img-fluid" alt=""></a>
-                                </div>
-                                <div class="col-8">
-                                    <div class="left-item-caption">
-                                        <a href="" class="name-product">Oppo A5</a>
-                                        <br>
-                                        <s class="me-3">$232.2</s>
-                                        <b>$141.2</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-4 content-left-item">
-                            <div class="row">
-                                <div class="col-3">
-                                    <a href=""> <img src="./Image/5.jpg" class="w-100 img-fluid" alt=""></a>
-                                </div>
-                                <div class="col-8">
-                                    <div class="left-item-caption">
-                                        <a href="" class="name-product">Máy tính ASUS</a>
-                                        <br>
-                                        <s class="me-3">$630</s>
-                                        <b>$600.5</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-9 content-right">
-                    <div class="row w-100" id="product-items">
-                    </div>
-                    <div class="row my-5">
-                        <nav aria-label="Page navigation example ">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item fs-3 disabled">
-                                    <a class="page-link text-dark" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                                </li>
-                                <li class="page-item fs-3 "><a class="page-link text-dark " href="#">1</a></li>
-                                <li class="page-item fs-3 "><a class="page-link text-dark " href="#">2</a></li>
-                                <li class="page-item fs-3">
-                                    <a class="page-link text-dark" href="#">Next</a>
-                                </li>
-                            </ul>
+        <div class="container-fluid  mt-5  body-1">
+            <div class="container">
+                <div class="row body-1-title">
+                    <div class="col-12 col-md-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                                <li class="breadcrumb-item active fw-bold" aria-current="page">Cửa hàng</li>
+                            </ol>
                         </nav>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="filter d-flex justify-content-end align-items-center">
+                            <div class="filter-caption">
+                                Hiển thị 1-12 của 12 kết quả
+                            </div>
+                            <div class="form-group ms-5">
+                                <select id="my-select" class="form-select" name="">
+                                    <option class="select-1" value="select-1">Thứ tự mặc định</option>
+                                    <option class="select-2" value="select-2">Thứ tự theo mực độ phổ biến</option>
+                                    <option class="select-3" value="select-3">Thứ tự theo điểm đánh giá</option>
+                                    <option class="select-4" value="select-4">Mới nhất</option>
+                                    <option class="select-5" value="select-5">Thứ tự theo giá: từ cao xuống thấp
+                                    </option>
+                                    <option class="select-6" value="select-6">Thứ tự theo giá: từ thấp đến cao</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 body-1-content">
+                    <div class="col-lg-3 col-12 content-left">
+                        <div class="row filter my-4">
+                            <div class="col-12 mb-4 content-left-title fw-bold fs-4 text-dark text-uppercase">Lọc theo giá
+                            </div>
+                            <div class="around-price my-3 d-flex align-items-center">
+                                <input type="text" class="value value-min w-100" placeholder="$0">
+                                <div class="connect mx-4"></div>
+                                <input type="text" class="value value-max w-100" placeholder="$1000">
+                            </div>
+                            <div>
+                                <button type="submit" class="btn-filter btn bg-dark text-white fs-4 fw-bold w-25">Lọc</button>
+                            </div>
+                        </div>
+                        <div class="row d-lg-block d-none">
+                            <div class="col-12 mb-4 content-left-title fw-bold fs-4 text-dark text-uppercase">Sản phẩm giảm giá
+                            </div>
+                            <div class="col-12 mb-4 content-left-item">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="./product/headphone.html"> <img src="./Image/1.jpg" class="w-100 img-fluid" alt=""></a>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="left-item-caption">
+                                            <a href="./product/headphone.html" class="name-product">Tai nghe Samsung</a>
+                                            <br>
+                                            <s class="me-3">$100</s>
+                                            <b>$65.32</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 content-left-item">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href=""> <img src="./Image/2.jpg" class="w-100 img-fluid" alt=""></a>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="left-item-caption">
+                                            <a href="" class="name-product">Samsung Galaxy Watch</a>
+                                            <br>
+                                            <s class="me-3">$100</s>
+                                            <b>$92.3</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 content-left-item">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href=""> <img src="./Image/3.jpg" class="w-100 img-fluid" alt=""></a>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="left-item-caption">
+                                            <a href="" class="name-product">Oppo A5</a>
+                                            <br>
+                                            <s class="me-3">$232.2</s>
+                                            <b>$141.2</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 content-left-item">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href=""> <img src="./Image/5.jpg" class="w-100 img-fluid" alt=""></a>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="left-item-caption">
+                                            <a href="" class="name-product">Máy tính ASUS</a>
+                                            <br>
+                                            <s class="me-3">$630</s>
+                                            <b>$600.5</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9 content-right">
+                        <div class="row w-100" id="product-items">
+                        </div>
+                        <div class="row my-5">
+                            <nav aria-label="Page navigation example ">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item fs-3 disabled">
+                                        <a class="page-link text-dark" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <li class="page-item fs-3 "><a class="page-link text-dark " href="#">1</a></li>
+                                    <li class="page-item fs-3 "><a class="page-link text-dark " href="#">2</a></li>
+                                    <li class="page-item fs-3">
+                                        <a class="page-link text-dark" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -353,7 +358,7 @@
 
         <footer class="container-fluid" id="footer">
             <div class="container h-100">
-                <div class="row align-items-center h-100">
+                <div class="row p-2  align-items-center h-100">
                     <div class="col text-center">Copyright 2021 © Tran Huu Tai</div>
                     <div class="col">
                         <div class="row">

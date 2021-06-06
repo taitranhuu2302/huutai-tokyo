@@ -131,7 +131,6 @@ render = (list) => {
   $("#product-items").append(htmls);
 };
 render(product);
-
 sortPriceDecrease = () => {
   var sort = product.sort((a, b) => {
     return b.price - a.price;

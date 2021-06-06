@@ -68,10 +68,12 @@
                                 <div class="form-group">
                                     <input id="my-search" class="form-control" type="text" name="" placeholder="Tìm kiếm điện thoại, máy tính">
                                     <button class="btn btn-search"><i class="far fa-search"></i></button>
+                                    <div class="list-group tab-search">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col col-lg-3 col-sm-3 header-mid-cart d-flex align-items-center justify-content-end justify-content-lg-between justify-content-sm-end me-3 me-xl-0">
-                                <button type="button" class="btn login d-none d-lg-block " data-bs-toggle="modal" data-bs-target="#modal-login">Đăng nhập</button>
+                                <button type="button" class="btn login d-lg-block d-none" data-bs-toggle="modal" data-bs-target="#modal-login">Đăng nhập</button>
                                 <button type="button" class="btn" id="icon-cart">
                                     <i class="fas fa-shopping-bag"></i>
                                     <p class="tag-cart d-flex justify-content-center align-items-center rounded-circle">
@@ -90,7 +92,7 @@
                                 <li class="nav-item"><a href="index.html" class="nav-link text-uppercase">Trang chủ</a>
                                 </li>
                                 <li class="nav-item nav-dropdown">
-                                    <a href="./store.html" class="nav-link text-uppercase">Cửa hàng</a>
+                                    <a href="#" class="nav-link text-uppercase">Cửa hàng</a>
                                     <ul class="nav flex-column dropdown-list rounded animated fadeIn">
                                         <li class="nav-item"><a href="" class=" nav-link list-item">Điện thoại</a></li>
                                         <li class="nav-item"><a href="" class=" nav-link list-item">Tai nghe</a></li>
@@ -177,7 +179,7 @@
                                         <div class="input regis d-none d-flex flex-column align-items-center pt-5">
                                             <input class="" type="text" name="" id="username" placeholder="Username">
                                             <p class="text-danger mess-erorr"></p>
-                                            <input class="" type="email" class="form-control" id="email1" placeholder="mail@example.com">
+                                            <input class="" type="email" class="form-control" id="email" placeholder="mail@example.com">
                                             <p class="text-danger mess-erorr"></p>
                                             <input class="" type="password" name="" id="password" placeholder="Password">
                                             <p class="text-danger mess-erorr"></p>
@@ -551,9 +553,9 @@
 
         <footer class="container-fluid p-0" id="footer">
             <div class="container h-100">
-                <div class="row align-items-center h-100">
+                <div class="row p-2  align-items-center h-100">
                     <div class="col text-center">Copyright 2021 © Tran Huu Tai</div>
-                    <div class="col d-flex">
+                    <div class="col">
                         <div class="row">
                             <div class="col text-center">
                                 <div class="hotline">

@@ -82,6 +82,7 @@
                 }
             }
             .header-mid-search {
+                position: relative;
                 .form-group {
                     height: 33px;
                     position: relative;
@@ -99,6 +100,19 @@
                         transform: translateY(-50%);
                         i {
                             font-size: 16px;
+                        }
+                    }
+                    .tab-search {
+                        width: 100%;
+                        background-color: #fff;
+                        z-index: 10000;
+                        position: absolute;
+                        a {
+                            font-size: 16px;
+                            img {
+                                height: 50px;
+                            }
+                            span {}
                         }
                     }
                 }

@@ -68,25 +68,12 @@
                                 <div class="form-group">
                                     <input id="my-search" class="form-control" type="text" name="" placeholder="Tìm kiếm điện thoại, máy tính">
                                     <button class="btn btn-search"><i class="far fa-search"></i></button>
+                                    <div class="list-group tab-search">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col col-lg-3 col-sm-3 header-mid-cart d-flex align-items-center justify-content-end justify-content-lg-between justify-content-sm-end me-3 me-xl-0">
                                 <button type="button" class="btn login d-lg-block d-none" data-bs-toggle="modal" data-bs-target="#modal-login">Đăng nhập</button>
-                                <div>
-                                    <button type="button" class="btn logged d-none" id="logged-btn" data-bs-toggle="dropdown">
-                                        <span>Tài khoản</span>
-                                        <i class="fas fa-user"></i>
-                                    </button>
-                                    <ul class="dropdown-menu logged-dropdown" aria-labelledby="logged-btn">
-                                        <li><a class="dropdown-item" href="#">Trang tài khoản</a></li>
-                                        <li><a class="dropdown-item" href="#">Đơn hàng</a></li>
-                                        <li><a class="dropdown-item" href="#">Tải xuống</a></li>
-                                        <li><a class="dropdown-item" href="#">Địa chỉ</a></li>
-                                        <li><a class="dropdown-item" href="#">Tài khoản</a></li>
-                                        <li><a class="dropdown-item" href="#">Wishlist</a></li>
-                                        <li><a class="dropdown-item" href="#">Thoát</a></li>
-                                    </ul>
-                                </div>
                                 <button type="button" class="btn" id="icon-cart">
                                     <i class="fas fa-shopping-bag"></i>
                                     <p class="tag-cart d-flex justify-content-center align-items-center rounded-circle">
@@ -102,9 +89,10 @@
                     <div class="container h-100">
                         <div class="d-flex h-100 align-items-center justify-content-center">
                             <ul class="nav">
-                                <li class="nav-item"><a href="" class="nav-link text-uppercase ">Trang chủ</a></li>
+                                <li class="nav-item"><a href="index.html" class="nav-link text-uppercase">Trang chủ</a>
+                                </li>
                                 <li class="nav-item nav-dropdown">
-                                    <a href="store.html" class="nav-link text-uppercase">Cửa hàng</a>
+                                    <a href="#" class="nav-link text-uppercase">Cửa hàng</a>
                                     <ul class="nav flex-column dropdown-list rounded animated fadeIn">
                                         <li class="nav-item"><a href="" class=" nav-link list-item">Điện thoại</a></li>
                                         <li class="nav-item"><a href="" class=" nav-link list-item">Tai nghe</a></li>
@@ -126,6 +114,7 @@
                     <button type="button" onclick="" id="cart-close" class="btn-close" aria-label="Close"></button>
                 </div>
                 <ul class="nav" id="items">
+
                 </ul>
                 <div class="total-price">
                     <div class="pay ms-4 mt-5">
@@ -175,53 +164,54 @@
                             <li class="list-group-item"><a href="" class="">Thoát</a></li>
                         </ul>
                     </li>
-                    <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog w-100 h-100">
-                            <div class="modal-content">
-                                <div class="modal-body p-0 w-100">
-                                    <div class="container-fluid w-100 h-100 p-0">
-                                        <div class="row w-100 h-100 g-0">
-                                            <div class="col background-login">
+
+                </ul>
+            </div>
+            <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog w-100 h-100">
+                    <div class="modal-content">
+                        <div class="modal-body p-0 w-100">
+                            <div class="container-fluid w-100 h-100 p-0">
+                                <div class="row w-100 h-100 g-0">
+                                    <div class="col background-login">
+                                    </div>
+                                    <div class="col p-0 input-login">
+                                        <div class="input regis d-none d-flex flex-column align-items-center pt-5">
+                                            <input class="" type="text" name="" id="username" placeholder="Username">
+                                            <p class="text-danger mess-erorr"></p>
+                                            <input class="" type="email" class="form-control" id="email" placeholder="mail@example.com">
+                                            <p class="text-danger mess-erorr"></p>
+                                            <input class="" type="password" name="" id="password" placeholder="Password">
+                                            <p class="text-danger mess-erorr"></p>
+                                            <input class="" type="password" name="" id="Comfirm-password" placeholder="Comfirm Password">
+                                            <p class="text-danger mess-erorr"></p>
+                                            <button id="btn-regis" class="btn w-75 btn-primary">Register</button>
+                                        </div>
+                                        <div class="input login d-flex flex-column align-items-center pt-5">
+                                            <div class="display-3 text-white mb-5 fw-bold">SIGN IN</div>
+                                            <input class="" type="text" name="" id="username-login" placeholder="Username">
+                                            <input class="" type="password" name="" id="password-login" placeholder="Password">
+                                            <p class="text-danger mess-erorr"></p>
+                                            <button id="btn-login" class="btn w-75 btn-primary">Login</button>
+                                        </div>
+                                        <div class="bottom text-center text-white mt-3">
+                                            <div class="bottom-title">
+                                                <a type="button" class="changeLR text-decoration-none">Register</a> of Fast Login With Your Favourite Social Profile
                                             </div>
-                                            <div class="col p-0 input-login">
-                                                <div class="input regis d-none d-flex flex-column align-items-center pt-5">
-                                                    <input class="" type="text" name="" id="username" placeholder="Username">
-                                                    <p class="text-danger mess-erorr"></p>
-                                                    <input class="" type="email" class="form-control" id="email" placeholder="mail@example.com">
-                                                    <p class="text-danger mess-erorr"></p>
-                                                    <input class="" type="password" name="" id="password" placeholder="Password">
-                                                    <p class="text-danger mess-erorr"></p>
-                                                    <input class="" type="password" name="" id="Comfirm-password" placeholder="Comfirm Password">
-                                                    <p class="text-danger mess-erorr"></p>
-                                                    <button id="btn-regis" class="btn w-75 btn-primary">Register</button>
-                                                </div>
-                                                <div class="input login d-flex flex-column align-items-center pt-5">
-                                                    <div class="display-3 text-white mb-5 fw-bold">SIGN IN</div>
-                                                    <input class="" type="text" name="" id="username-login" placeholder="Username">
-                                                    <input class="" type="password" name="" id="password-login" placeholder="Password">
-                                                    <p class="text-danger mess-erorr"></p>
-                                                    <button id="btn-login" class="btn w-75 btn-primary">Login</button>
-                                                </div>
-                                                <div class="bottom text-center text-white mt-3">
-                                                    <div class="bottom-title">
-                                                        <a type="button" class="changeLR text-decoration-none">Register</a> of Fast Login With Your Favourite Social Profile
-                                                    </div>
-                                                    <div class="icon d-flex justify-content-center mt-3">
-                                                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                                                        <a href=""><i class="fab fa-youtube"></i></a>
-                                                        <a href=""><i class="fab fa-twitter"></i></a>
-                                                        <a href=""><i class="fab fa-google-plus-g"></i></a>
-                                                    </div>
-                                                </div>
+                                            <div class="icon d-flex justify-content-center mt-3">
+                                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                                <a href=""><i class="fab fa-youtube"></i></a>
+                                                <a href=""><i class="fab fa-twitter"></i></a>
+                                                <a href=""><i class="fab fa-google-plus-g"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
+
                     </div>
-                </ul>
+                </div>
             </div>
         </header>
         <!-- Header End -->
@@ -300,7 +290,7 @@
             </div>
             <div class="container d-flex justify-content-center">
                 <div class="row g-0" id="product-items">
-                    <div class="col-lg-3 col-6 product-item" data-aos="fade-right" data-aos-duration="2500">
+                    <!-- <div class="col-lg-3 col-6 product-item" data-aos="fade-right" data-aos-duration="2500">
                         <div class="p-3">
                             <a href="./product/headphone.html" class="item-img">
                                 <img src="./Image/1.jpg" alt="" class="img">
@@ -478,7 +468,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -640,9 +630,9 @@
         </div>
         <footer class="container-fluid" id="footer">
             <div class="container h-100">
-                <div class="row align-items-center h-100">
+                <div class="row align-items-center p-2 h-100">
                     <div class="col text-center">Copyright 2021 © Tran Huu Tai</div>
-                    <div class="col d-flex">
+                    <div class="col">
                         <div class="row">
                             <div class="col text-center">
                                 <div class="hotline">

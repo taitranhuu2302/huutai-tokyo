@@ -98,6 +98,10 @@
   width: 151px;
 }
 
+#header #header-sticky .header-mid .header-mid-search {
+  position: relative;
+}
+
 #header #header-sticky .header-mid .header-mid-search .form-group {
   height: 33px;
   position: relative;
@@ -121,6 +125,21 @@
 
 #header #header-sticky .header-mid .header-mid-search .form-group .btn-search i {
   font-size: 16px;
+}
+
+#header #header-sticky .header-mid .header-mid-search .form-group .tab-search {
+  width: 100%;
+  background-color: #fff;
+  z-index: 10000;
+  position: absolute;
+}
+
+#header #header-sticky .header-mid .header-mid-search .form-group .tab-search a {
+  font-size: 16px;
+}
+
+#header #header-sticky .header-mid .header-mid-search .form-group .tab-search a img {
+  height: 50px;
 }
 
 #header #header-sticky .header-mid .header-mid-cart {

@@ -6,6 +6,104 @@ var cart = document.getElementById("cart-dropdown");
 var headerNav = document.getElementById("menu-mb");
 var listItemsCart = document.getElementById("items");
 var items = document.getElementById("product-items");
+let productSearch = [
+  {
+    addressLink: "./product/headphone.html",
+    image1: "./Image/store1 (2).jpg",
+    image2: "./Image/store1 (1).jpg",
+    name: "Airpod Pro",
+    price: 65.32,
+    salePrice: "$100",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/store2.jpg",
+    image2: "./Image/2.jpg",
+    name: "Apple Watch Series 5",
+    price: 80.2,
+    salePrice: "$123.22",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/store3 (1).jpg",
+    image2: "./Image/store4 (1).jpg",
+    name: "Điện Thoại Oppo",
+    price: 92.2,
+    salePrice: "$150.2",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/store4 (2).jpg",
+    image2: "./Image/store4 (1).jpg",
+    name: "Điện Thoại Vsmart",
+    price: 100.5,
+    salePrice: "$156.2",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/store5 (1).jpg",
+    image2: "./Image/store5 (2).jpg",
+    name: "Điện Thoại Xiaomi",
+    price: 200.5,
+    salePrice: "$250.2",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/7.jpg",
+    image2: "./Image/store7.jpg",
+    name: "Iphone 6",
+    price: 250.2,
+    salePrice: "$350",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/store8 (1).jpg",
+    image2: "./Image/store8 (2).jpg",
+    name: "Macbook Air 2020",
+    price: 120.2,
+    salePrice: "$250",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/store9 (1).jpg",
+    image2: "./Image/store9 (2).jpg",
+    name: "Máy Tính HP",
+    price: 232.53,
+    salePrice: "$323",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/store10 (1).jpg",
+    image2: "./Image/store10 (2).jpg",
+    name: "Máy tính ASUS",
+    price: 320.32,
+    salePrice: "$400",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/3.jpg",
+    image2: "./Image/store4 (2).jpg",
+    name: "Oppo A5",
+    price: 423.32,
+    salePrice: "$500",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/2.jpg",
+    image2: "./Image/store11.jpg",
+    name: "Samsung Galaxy Watch",
+    price: 120.32,
+    salePrice: "$200.2",
+  },
+  {
+    addressLink: "",
+    image1: "./Image/store12 (1).jpg",
+    image2: "./Image/store12 (2).jpg",
+    name: "Tai Nghe Beats",
+    price: 321.32,
+    salePrice: "$400.5",
+  },
+];
 // sticky header
 mySticky = () => {
   const headerTop = document.getElementById("header-top");
@@ -358,4 +456,39 @@ $(() => {
 
 $(window).on("load", () => {
   $("#loader").delay(100).fadeOut("slow");
+});
+
+$(() => {
+  $(() => {
+    var htmlsSearch = productSearch.map((product, index) => {
+      return `
+        <a href="#" class="list-group-item tab-search-item d-none d-flex align-items-center justify-content-between list-group-item-action">
+            <div>
+                <img src="${product.image1}" class="img-fluid" alt="">
+                <span class="item-search-name">${product.name}</span>
+            </div>
+            <div>
+                <b>$${product.price}</b>
+            </div>
+        </a>
+        `;
+    });
+    $(".tab-search").append(htmlsSearch);
+  });
+  $("#my-search").keyup(() => {
+    var key = document.getElementById("my-search").value.toUpperCase();
+    var item = document.getElementsByClassName("tab-search-item");
+    for (let i = 0; i < item.length; i++) {
+      var item1 =
+        item[i].getElementsByClassName("item-search-name")[0].innerText;
+      if (item1.toUpperCase().indexOf(key) > -1) {
+        item[i].classList.remove("d-none");
+      } else {
+        item[i].classList.add("d-none");
+      }
+    }
+    if (!key || key == " ") {
+      $(".tab-search-item").addClass("d-none");
+    }
+  });
 });

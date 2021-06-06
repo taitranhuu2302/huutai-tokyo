@@ -65,20 +65,18 @@
                                 <button class="btn btn-menu" id="btn-toggle-menu"><i class="far fa-bars"></i></button>
                             </div>
                             <div class="col col-lg-3 col-sm-3 header-mid-logo text-center">
-                                <a href="../index.html"><img id="logo" src="../Image/header-logo.png" alt=""></a>
+                                <a href="index.html"><img id="logo" src="../Image/header-logo.png" alt=""></a>
                             </div>
                             <div class="col-lg-6 d-none d-lg-block header-mid-search">
-                                <div class="form-group">
+                                <div class="form-group form-search">
                                     <input id="my-search" class="form-control" type="text" name="" placeholder="Tìm kiếm điện thoại, máy tính">
                                     <button class="btn btn-search"><i class="far fa-search"></i></button>
+                                    <div class="list-group tab-search">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col col-lg-3 col-sm-3 header-mid-cart d-flex align-items-center justify-content-end justify-content-lg-between justify-content-sm-end me-3 me-xl-0">
                                 <button type="button" class="btn login d-lg-block d-none" data-bs-toggle="modal" data-bs-target="#modal-login">Đăng nhập</button>
-                                <button class="btn logged d-none">
-                                    <span>Tài khoản</span>
-                                    <i class="fas fa-user"></i>
-                                </button>
                                 <button type="button" class="btn" id="icon-cart">
                                     <i class="fas fa-shopping-bag"></i>
                                     <p class="tag-cart d-flex justify-content-center align-items-center rounded-circle">
@@ -86,6 +84,7 @@
                                     </p>
                                 </button>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -93,11 +92,10 @@
                     <div class="container h-100">
                         <div class="d-flex h-100 align-items-center justify-content-center">
                             <ul class="nav">
-                                <li class="nav-item"><a href="../index.html" class="nav-link text-uppercase">Trang
-                                        chủ</a>
+                                <li class="nav-item"><a href="index.html" class="nav-link text-uppercase">Trang chủ</a>
                                 </li>
                                 <li class="nav-item nav-dropdown">
-                                    <a href="../store.html" class="nav-link text-uppercase">Cửa hàng</a>
+                                    <a href="#" class="nav-link text-uppercase">Cửa hàng</a>
                                     <ul class="nav flex-column dropdown-list rounded animated fadeIn">
                                         <li class="nav-item"><a href="" class=" nav-link list-item">Điện thoại</a></li>
                                         <li class="nav-item"><a href="" class=" nav-link list-item">Tai nghe</a></li>
@@ -119,6 +117,7 @@
                     <button type="button" onclick="" id="cart-close" class="btn-close" aria-label="Close"></button>
                 </div>
                 <ul class="nav" id="items">
+
                 </ul>
                 <div class="total-price">
                     <div class="pay ms-4 mt-5">
@@ -345,8 +344,8 @@
                 <hr class="mt-5">
                 <div class="row other-product">
                     <div class="other-product-title fw-bold fs-2">SẢN PHẨM TƯƠNG TỰ</div>
-                    <div class="row" id="product-items">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 product-item" data-aos="fade-right" data-aos-duration="2500">
+                    <div class="row overflow-hidden" id="product-items">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 product-item" data-aos="fade-down" data-aos-duration="1000">
                             <div class="">
                                 <a href="./product/headphone.html" class="item-img">
                                     <div class="item-bg">
@@ -372,7 +371,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 product-item" data-aos="fade-left" data-aos-duration="2500">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 product-item" data-aos="fade-down" data-aos-duration="1000">
                             <div class="">
                                 <a href="" class="item-img">
                                     <div class="item-bg">
@@ -404,9 +403,9 @@
         </div>
         <footer class="container-fluid" id="footer">
             <div class="container h-100">
-                <div class="row align-items-center h-100">
+                <div class="row p-2  align-items-center h-100">
                     <div class="col text-center">Copyright 2021 © Tran Huu Tai</div>
-                    <div class="col d-flex">
+                    <div class="col">
                         <div class="row">
                             <div class="col text-center">
                                 <div class="hotline">

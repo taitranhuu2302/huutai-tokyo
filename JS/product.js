@@ -104,8 +104,7 @@ $(() => {
     `;
   });
   $(".rate-comment").append(htmls);
-checkComment();
-
+  checkComment();
 });
 checkComment = () => {
   var comment = $(".rate-comment-item").length;

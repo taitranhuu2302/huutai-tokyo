@@ -1,10 +1,10 @@
 var product = [
   {
-    addressLink: "./product/headphone.html",
+    addressLink: "",
     image1: "./Image/store1 (2).jpg",
     image2: "./Image/store1 (1).jpg",
     name: "Airpod Pro",
-    price: 65.32,
+    price: 500.32,
     salePrice: "$100",
   },
   {

@@ -148,7 +148,6 @@ $(() => {
         quantity: quantity1,
         total: total1,
       });
-      // localStorage.setItem("listCartNew", JSON.stringify(listCartNew));
     }
     var renderItem = listCartNew.map((listCartNew, index) => {
       return `
@@ -221,13 +220,14 @@ $(() => {
       document.getElementById("first-name").value;
     var address = document.getElementById("address").value;
     var city = document.getElementById("select").value;
-    var email = document.getElementById("email").value;
+    var email = document.getElementById("email1").value;
     var phone = document.getElementById("phone").value;
     var note = document.getElementById("note").value;
     var payments = $(".form-check-input:checked").val()
       ? $(".form-check-input:checked").val()
       : "Trả tiền mặt khi nhận hàng";
     if (!fullname || !address || !city || !email || !phone) {
+      console.log(fullname, address, city, email, phone);
       Swal.fire({
         position: "center",
         icon: "warning",

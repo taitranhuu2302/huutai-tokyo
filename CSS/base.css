@@ -6,10 +6,6 @@
   padding: 0;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 html {
   /* font-size: 100%  = 16px */
   font-size: 62.5%;

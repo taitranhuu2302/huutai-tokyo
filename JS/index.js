@@ -1,108 +1,162 @@
-// owl carousel
-var product = [
+let product = [
   {
-    link: "./product/headphone.html",
-    img: "./Image/1.jpg",
-    tagSale: "-36%",
-    tagCategory: "Tai nghe",
-    name: "Tai Nghe Samsung",
-    priceSale: "$100",
-    price: "65.32",
+    addressLink: "./product/AirpodPro.html",
+    image1: "./Image/store1 (2).jpg",
+    image2: "./Image/store1 (1).jpg",
+    tagCategory: "Tai Nghe",
+    name: "Airpod Pro",
+    tagSale: "36%",
+    price: 500.32,
+    salePrice: "$100",
   },
   {
-    link: "",
-    img: "./Image/2.jpg",
-    tagSale: "-7%",
-    tagCategory: "Đồng hồ",
-    name: "Samsung Galaxy Watch",
-    priceSale: "$100",
-    price: "92.3",
+    addressLink: "./product/AppleWatchSeries5.html",
+    image1: "./Image/store2.jpg",
+    image2: "./Image/2.jpg",
+    name: "Apple Watch Series 5",
+    tagSale: "25%",
+    tagCategory: "Đồng Hồ",
+    price: 80.2,
+    salePrice: "$123.22",
   },
   {
-    link: "",
-    img: "./Image/3.jpg",
-    tagSale: "-42%",
-    tagCategory: "Điện thoại",
-    name: "Oppo A5",
-    priceSale: "$232.2",
-    price: "141.2",
+    addressLink: "./product/OPPO.html",
+    image1: "./Image/store3 (1).jpg",
+    image2: "./Image/store4 (1).jpg",
+    name: "Điện Thoại Oppo",
+    tagCategory: "Điện Thoại",
+    tagSale: "15%",
+    price: 92.2,
+    salePrice: "$150.2",
   },
   {
-    link: "",
-    img: "./Image/4.jpg",
-    tagSale: "-15%",
-    tagCategory: "Máy tính",
-    name: "Máy tính HP",
-    priceSale: "",
-    price: "500.5",
+    addressLink: "./product/Vsmart.html",
+    image1: "./Image/store4 (2).jpg",
+    image2: "./Image/store4 (1).jpg",
+    name: "Điện Thoại Vsmart",
+    tagCategory: "Điện Thoại",
+    tagSale: "62%",
+    price: 100.5,
+    salePrice: "$156.2",
   },
   {
-    link: "",
-    img: "./Image/5.jpg",
-    tagSale: "-14%",
-    tagCategory: "Máy tính",
-    name: "Máy Tính ASUS",
-    priceSale: "$630",
-    price: "600.5",
+    addressLink: "./product/Xiaomi.html",
+    image1: "./Image/xiaomi-mi-9-1-600x600.jpg",
+    image2: "./Image/store5 (2).jpg",
+    name: "Điện Thoại Xiaomi",
+    tagCategory: "Điện Thoại",
+    tagSale: "25%",
+    price: 200.5,
+    salePrice: "$250.2",
   },
   {
-    link: "",
-    img: "./Image/6.jpg",
-    tagSale: "-22%",
-    tagCategory: "Máy tính",
+    addressLink: "./product/Iphone6.html",
+    image1: "./Image/7.jpg",
+    image2: "./Image/store7.jpg",
+    name: "Iphone 6",
+    tagCategory: "Điện Thoại",
+    tagSale: "34%",
+    price: 250.2,
+    salePrice: "$350",
+  },
+  {
+    addressLink: "./product/MacbookAir.html",
+    image1: "./Image/store8 (1).jpg",
+    image2: "./Image/store8 (2).jpg",
     name: "Macbook Air 2020",
-    priceSale: "$400.9",
-    price: "300.9",
+    tagCategory: "Laptop",
+    tagSale: "28%",
+    price: 900,
+    salePrice: "$1200",
   },
   {
-    link: "",
-    img: "./Image/7.jpg",
-    tagSale: "-18%",
-    tagCategory: "-43%",
-    name: "Điện thoại",
-    priceSale: "$200.2",
-    price: "180.2",
+    addressLink: "./product/HP.html",
+    image1: "./Image/0812_16-may-tinh-hp-core-i5-1.jpg",
+    image2: "./Image/store9 (2).jpg",
+    name: "Máy Tính HP",
+    tagCategory: "Laptop",
+    tagSale: "35%",
+    price: 800,
+    salePrice: "$1000",
   },
   {
-    link: "",
-    img: "./Image/8.jpg",
-    tagSale: "-36%",
-    tagCategory: "Điện thoại",
-    name: "Điện thoại Xiaomi",
-    priceSale: "$190.4",
-    price: "100.8",
+    addressLink: "./product/ASUS.html",
+    image1: "./Image/store10 (1).jpg",
+    image2: "./Image/store10 (2).jpg",
+    name: "Máy tính ASUS",
+    tagCategory: "Laptop",
+    tagSale: "32%",
+    price: 950,
+    salePrice: "$1500",
+  },
+  {
+    addressLink: "./product/OPPOA5.html",
+    image1: "./Image/3.jpg",
+    image2: "./Image/store4 (2).jpg",
+    name: "Oppo A5",
+    tagCategory: "Điện Thoại",
+    tagSale: "25%",
+    price: 423.32,
+    salePrice: "$500",
+  },
+  {
+    addressLink: "./product/GalaxyWatch.html",
+    image1: "./Image/samsung-galaxy-watch-3-lte-45mm-thum-600x600.jpg",
+    image2:
+      "./Image/samsung-galaxy-watch-active-2-lte-44-mm-day-da-ava-600x600.jpg",
+    name: "Samsung Galaxy Watch",
+    tagCategory: "Đồng Hồ",
+    tagSale: "10%",
+    price: 800.2,
+    salePrice: "$1000.2",
+  },
+  {
+    addressLink: "./product/TaiNgheBeats.html",
+    image1: "./Image/tai-nghe-chup-tai-beats-studio3-mx422-mx432-600x600.jpg",
+    image2: "./Image/2-600x600.jpg",
+    name: "Tai Nghe Beats",
+    tagCategory: "Tai Nghe",
+    tagSale: "16%",
+    price: 321.32,
+    salePrice: "$400.5",
   },
 ];
+
 render = () => {
+  var index = 0;
   var htmls = product.map((product, index) => {
-    return `
-    <div class="col-lg-3 col-6 product-item" data-aos="fade-right" data-aos-duration="1500">
-        <div class="p-3">
-            <a href="${product.link}" class="item-img">
-                <img src="${product.img}" alt="" class="img">
-                <span class="tag">${product.tagSale}</span>
-                <button class="btn"><i class="fas fa-heart"></i></button>
-                <span class="quick-view">Quick View</span>
-            </a>
-            <div class="item-caption">
-                <div class="caption-title">
-                    <span>${product.tagCategory}</span>
-                    <h5 class="name-product">${product.name}</h5>
-                    <div class="price">
-                        <s>${product.priceSale}</s><span class="icon-dollar">$<b class="price-product">${product.price}</b></span>
-                    </div>
-                </div>
-                <button class="btn caption-btn">
-                    Thêm vào giỏ hàng
-                </button>
-            </div>
-        </div>
-    </div>
-        `;
+    index++;
+    if (index < 9) {
+      return `
+      <div class="col-lg-3 col-6 product-item" data-aos="fade-right" data-aos-duration="1500">
+          <div class="p-3">
+              <a href="${product.addressLink}" class="item-img">
+                  <img src="${product.image1}" alt="" class="img">
+                  <span class="tag">${product.tagSale}</span>
+                  <button class="btn"><i class="fas fa-heart"></i></button>
+                  <span class="quick-view">Quick View</span>
+              </a>
+              <div class="item-caption">
+                  <div class="caption-title">
+                      <span>${product.tagCategory}</span>
+                      <h5 class="name-product">${product.name}</h5>
+                      <div class="price">
+                          <s>${product.salePrice}</s><span class="icon-dollar">$<b class="price-product">${product.price}</b></span>
+                      </div>
+                  </div>
+                  <button class="btn caption-btn">
+                      Thêm vào giỏ hàng
+                  </button>
+              </div>
+          </div>
+      </div>
+          `;
+    }
   });
   $("#product-items").append(htmls);
 };
 render(product);
+// owl carousel
 
 $(".portfolio-items").owlCarousel({
   loop: true,

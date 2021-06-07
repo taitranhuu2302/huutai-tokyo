@@ -1,22 +1,38 @@
-#footer {
+#footer .footer-top {
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+}
+
+#footer .footer-top .list-group-item {
+  background-color: #000;
+}
+
+#footer .footer-top .footer-top-2 img {
+  width: 75px;
+  height: 75px;
+  margin-right: 16px;
+}
+
+#footer .footer-bottom {
   height: 85px;
   background-color: #424242;
   font-size: 15px;
   color: white;
 }
 
-#footer .hotline {
+#footer .footer-bottom .hotline {
   margin-right: 10px;
 }
 
-#footer .icons .icon {
+#footer .footer-bottom .icons .icon {
   margin-right: 10px;
   width: 50px;
   height: 31px;
   border-radius: 2px;
 }
 
-#footer .icons .icon svg {
+#footer .footer-bottom .icons .icon svg {
   background-color: #5555;
   width: 100%;
   height: 100%;

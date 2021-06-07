@@ -8,102 +8,116 @@ var listItemsCart = document.getElementById("items");
 var items = document.getElementById("product-items");
 let productSearch = [
   {
-    addressLink: "./product/headphone.html",
+    addressLink: "./product/AirpodPro.html",
     image1: "./Image/store1 (2).jpg",
     image2: "./Image/store1 (1).jpg",
+    tagCategory: "Tai Nghe",
     name: "Airpod Pro",
-    price: 65.32,
+    price: 500.32,
     salePrice: "$100",
   },
   {
-    addressLink: "",
+    addressLink: "./product/AppleWatchSeries5.html",
     image1: "./Image/store2.jpg",
     image2: "./Image/2.jpg",
     name: "Apple Watch Series 5",
+    tagCategory: "Đồng Hồ",
     price: 80.2,
     salePrice: "$123.22",
   },
   {
-    addressLink: "",
+    addressLink: "./product/OPPO.html",
     image1: "./Image/store3 (1).jpg",
     image2: "./Image/store4 (1).jpg",
     name: "Điện Thoại Oppo",
+    tagCategory: "Điện Thoại",
     price: 92.2,
     salePrice: "$150.2",
   },
   {
-    addressLink: "",
+    addressLink: "./product/Vsmart.html",
     image1: "./Image/store4 (2).jpg",
     image2: "./Image/store4 (1).jpg",
     name: "Điện Thoại Vsmart",
+    tagCategory: "Điện Thoại",
     price: 100.5,
     salePrice: "$156.2",
   },
   {
-    addressLink: "",
-    image1: "./Image/store5 (1).jpg",
+    addressLink: "./product/Xiaomi.html",
+    image1: "./Image/xiaomi-mi-9-1-600x600.jpg",
     image2: "./Image/store5 (2).jpg",
     name: "Điện Thoại Xiaomi",
+    tagCategory: "Điện Thoại",
     price: 200.5,
     salePrice: "$250.2",
   },
   {
-    addressLink: "",
+    addressLink: "./product/Iphone6.html",
     image1: "./Image/7.jpg",
     image2: "./Image/store7.jpg",
     name: "Iphone 6",
+    tagCategory: "Điện Thoại",
     price: 250.2,
     salePrice: "$350",
   },
   {
-    addressLink: "",
+    addressLink: "./product/MacbookAir.html",
     image1: "./Image/store8 (1).jpg",
     image2: "./Image/store8 (2).jpg",
     name: "Macbook Air 2020",
-    price: 120.2,
-    salePrice: "$250",
+    tagCategory: "Laptop",
+    price: 900,
+    salePrice: "$1200",
   },
   {
-    addressLink: "",
-    image1: "./Image/store9 (1).jpg",
+    addressLink: "./product/HP.html",
+    image1: "./Image/0812_16-may-tinh-hp-core-i5-1.jpg",
     image2: "./Image/store9 (2).jpg",
     name: "Máy Tính HP",
-    price: 232.53,
-    salePrice: "$323",
+    tagCategory: "Laptop",
+    price: 800,
+    salePrice: "$1000",
   },
   {
-    addressLink: "",
+    addressLink: "./product/ASUS.html",
     image1: "./Image/store10 (1).jpg",
     image2: "./Image/store10 (2).jpg",
     name: "Máy tính ASUS",
-    price: 320.32,
-    salePrice: "$400",
+    tagCategory: "Laptop",
+    price: 950,
+    salePrice: "$1500",
   },
   {
-    addressLink: "",
+    addressLink: "./product/OPPOA5.html",
     image1: "./Image/3.jpg",
     image2: "./Image/store4 (2).jpg",
     name: "Oppo A5",
+    tagCategory: "Điện Thoại",
     price: 423.32,
     salePrice: "$500",
   },
   {
-    addressLink: "",
-    image1: "./Image/2.jpg",
-    image2: "./Image/store11.jpg",
+    addressLink: "./product/GalaxyWatch.html",
+    image1: "./Image/samsung-galaxy-watch-3-lte-45mm-thum-600x600.jpg",
+    image2:
+      "./Image/samsung-galaxy-watch-active-2-lte-44-mm-day-da-ava-600x600.jpg",
     name: "Samsung Galaxy Watch",
-    price: 120.32,
-    salePrice: "$200.2",
+    tagCategory: "Đồng Hồ",
+    price: 800.2,
+    salePrice: "$1000.2",
   },
   {
-    addressLink: "",
-    image1: "./Image/store12 (1).jpg",
-    image2: "./Image/store12 (2).jpg",
+    addressLink: "./product/TaiNgheBeats.html",
+    image1: "./Image/tai-nghe-chup-tai-beats-studio3-mx422-mx432-600x600.jpg",
+    image2: "./Image/2-600x600.jpg",
     name: "Tai Nghe Beats",
+    tagCategory: "Tai Nghe",
     price: 321.32,
     salePrice: "$400.5",
   },
 ];
+
 // sticky header
 mySticky = () => {
   const headerTop = document.getElementById("header-top");
@@ -462,7 +476,7 @@ $(() => {
   $(() => {
     var htmlsSearch = productSearch.map((product, index) => {
       return `
-        <a href="#" class="list-group-item tab-search-item d-none d-flex align-items-center justify-content-between list-group-item-action">
+        <a href="${product.addressLink}" class="list-group-item tab-search-item d-none d-flex align-items-center justify-content-between list-group-item-action">
             <div>
                 <img src="${product.image1}" class="img-fluid" alt="">
                 <span class="item-search-name">${product.name}</span>
@@ -491,4 +505,14 @@ $(() => {
       $(".tab-search-item").addClass("d-none");
     }
   });
+});
+
+$(() => {
+  var listItem = document.getElementsByClassName("list-item");
+  for (const item of listItem) {
+    item.addEventListener("click", (event) => {
+      thiss = event.target.innerText;
+      return localStorage.setItem("switch", thiss);
+    });
+  }
 });

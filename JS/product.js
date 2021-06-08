@@ -1,8 +1,8 @@
 let product = [
   {
     addressLink: "./AirpodPro.html",
-    image1: "../Image/store1 (2).jpg",
-    image2: "../Image/store1 (1).jpg",
+    image1: "./Image/store1 (2).jpg",
+    image2: "./Image/store1 (1).jpg",
     tagCategory: "Tai Nghe",
     name: "Airpod Pro",
     price: 500.32,
@@ -10,8 +10,8 @@ let product = [
   },
   {
     addressLink: "./AppleWatchSeries5.html",
-    image1: "../Image/store2.jpg",
-    image2: "../Image/2.jpg",
+    image1: "./Image/store2.jpg",
+    image2: "./Image/2.jpg",
     name: "Apple Watch Series 5",
     tagCategory: "Đồng Hồ",
     price: 80.2,
@@ -19,8 +19,8 @@ let product = [
   },
   {
     addressLink: "./OPPO.html",
-    image1: "../Image/store3 (1).jpg",
-    image2: "../Image/store4 (1).jpg",
+    image1: "./Image/store3 (1).jpg",
+    image2: "./Image/store4 (1).jpg",
     name: "Điện Thoại Oppo",
     tagCategory: "Điện Thoại",
     price: 92.2,
@@ -28,8 +28,8 @@ let product = [
   },
   {
     addressLink: "./Vsmart.html",
-    image1: "../Image/store4 (2).jpg",
-    image2: "../Image/store4 (1).jpg",
+    image1: "./Image/store4 (2).jpg",
+    image2: "./Image/store4 (1).jpg",
     name: "Điện Thoại Vsmart",
     tagCategory: "Điện Thoại",
     price: 100.5,
@@ -37,8 +37,8 @@ let product = [
   },
   {
     addressLink: "./Xiaomi.html",
-    image1: "../Image/xiaomi-mi-9-1-600x600.jpg",
-    image2: "../Image/store5 (2).jpg",
+    image1: "./Image/xiaomi-mi-9-1-600x600.jpg",
+    image2: "./Image/store5 (2).jpg",
     name: "Điện Thoại Xiaomi",
     tagCategory: "Điện Thoại",
     price: 200.5,
@@ -46,8 +46,8 @@ let product = [
   },
   {
     addressLink: "./Iphone6.html",
-    image1: "../Image/7.jpg",
-    image2: "../Image/store7.jpg",
+    image1: "./Image/7.jpg",
+    image2: "./Image/store7.jpg",
     name: "Iphone 6",
     tagCategory: "Điện Thoại",
     price: 250.2,
@@ -55,8 +55,8 @@ let product = [
   },
   {
     addressLink: "./MacbookAir.html",
-    image1: "../Image/store8 (1).jpg",
-    image2: "../Image/store8 (2).jpg",
+    image1: "./Image/store8 (1).jpg",
+    image2: "./Image/store8 (2).jpg",
     name: "Macbook Air 2020",
     tagCategory: "Laptop",
     price: 900,
@@ -64,8 +64,8 @@ let product = [
   },
   {
     addressLink: "./HP.html",
-    image1: "../Image/0812_16-may-tinh-hp-core-i5-1.jpg",
-    image2: "../Image/store9 (2).jpg",
+    image1: "./Image/0812_16-may-tinh-hp-core-i5-1.jpg",
+    image2: "./Image/store9 (2).jpg",
     name: "Máy Tính HP",
     tagCategory: "Laptop",
     price: 800,
@@ -73,8 +73,8 @@ let product = [
   },
   {
     addressLink: "./ASUS.html",
-    image1: "../Image/store10 (1).jpg",
-    image2: "../Image/store10 (2).jpg",
+    image1: "./Image/store10 (1).jpg",
+    image2: "./Image/store10 (2).jpg",
     name: "Máy tính ASUS",
     tagCategory: "Laptop",
     price: 950,
@@ -82,8 +82,8 @@ let product = [
   },
   {
     addressLink: "./OPPOA5.html",
-    image1: "../Image/3.jpg",
-    image2: "../Image/store4 (2).jpg",
+    image1: "./Image/3.jpg",
+    image2: "./Image/store4 (2).jpg",
     name: "Oppo A5",
     tagCategory: "Điện Thoại",
     price: 423.32,
@@ -91,9 +91,9 @@ let product = [
   },
   {
     addressLink: "./GalaxyWatch.html",
-    image1: "../Image/samsung-galaxy-watch-3-lte-45mm-thum-600x600.jpg",
+    image1: "./Image/samsung-galaxy-watch-3-lte-45mm-thum-600x600.jpg",
     image2:
-      "../Image/samsung-galaxy-watch-active-2-lte-44-mm-day-da-ava-600x600.jpg",
+      "./Image/samsung-galaxy-watch-active-2-lte-44-mm-day-da-ava-600x600.jpg",
     name: "Samsung Galaxy Watch",
     tagCategory: "Đồng Hồ",
     price: 800.2,
@@ -101,8 +101,8 @@ let product = [
   },
   {
     addressLink: "./TaiNgheBeats.html",
-    image1: "../Image/tai-nghe-chup-tai-beats-studio3-mx422-mx432-600x600.jpg",
-    image2: "../Image/2-600x600.jpg",
+    image1: "./Image/tai-nghe-chup-tai-beats-studio3-mx422-mx432-600x600.jpg",
+    image2: "./Image/2-600x600.jpg",
     name: "Tai Nghe Beats",
     tagCategory: "Tai Nghe",
     price: 321.32,

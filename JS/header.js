@@ -8,7 +8,7 @@ var listItemsCart = document.getElementById("items");
 var items = document.getElementById("product-items");
 let productSearch;
 $.ajax({
-  url: "../db.json",
+  url: "./db.json",
   success: (res) => {
     productSearch = res.product;
     search();
@@ -36,24 +36,6 @@ mySticky = () => {
 };
 // open close
 const oc = {
-  cartOpen: () => {
-    var iconCart = document.getElementById("icon-cart");
-    iconCart.addEventListener("click", () => {
-      if (cart.style.width == "320px") {
-        cart.style.width = "0";
-      } else {
-        cart.style.width = "320px";
-      }
-    });
-  },
-  cartClose: () => {
-    var iconClose = document.querySelector(
-      "#cart-dropdown .cart-title #cart-close"
-    );
-    iconClose.addEventListener("click", () => {
-      cart.style.width = "0";
-    });
-  },
   navClose: () => {
     var btnClose = document.getElementById("menu-close");
     btnClose.addEventListener("click", () => {
@@ -68,8 +50,6 @@ const oc = {
   },
 
   cartRun: function () {
-    this.cartOpen();
-    this.cartClose();
     this.navClose();
     this.navOpen();
   },
@@ -118,7 +98,10 @@ delProduct = function () {
   }
 };
 delClicked = function () {
-  var parent = this.parentElement.parentElement;
+  var parent =
+    this.parentElement.parentElement.parentElement.parentElement.parentElement
+      .parentElement;
+  console.log(parent.getElementsByClassName("title")[0].innerText);
   for (var i = 0; i < listCart.length; i++) {
     if (
       listCart[i].name === parent.getElementsByClassName("title")[0].innerText
@@ -189,22 +172,36 @@ function addItemToCart(name, price, imgSrc) {
     }
   }
   var itemContent = `
-    <li class="nav-item item">
-    <div class="row m-0 align-items-center">
-      <button type="button" class="close border rounded-circle"><b
-      class="icon-close fs-3">&times;</b></button>
-      <div class="col-4">
+  <li class="nav-item item row m-0 align-items-center">
+    <div class="col-4 p-0">
         <a href="" class="d-block p-2">
-          <img src="${imgSrc}" alt="" class="img-product img-fluid">
+            <img src="${imgSrc}" alt="" class="img-product img-fluid">
         </a>
-      </div>
-      <div class="col-8 caption">
-        <div class="title">${name}</div>
-        <div class="d-flex bottom">
-          <div class="d-flex align-items-center">$<span class="price">${price}</span></div>
-          <input type="number" class="quantity" value="1">
+    </div>
+    <div class="col-8 caption">
+        <div class="row">
+            <div class="mb-4 col-12">
+                <div class="row">
+                    <div class="col title ">
+                        ${name}
+                    </div>
+                    <div class="col text-end">
+                        <button type="button" class=" close fs-5 btn btn-danger">REMOVE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row px-3">
+                    <div class="col">$<span class="price">${price}</span>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <input type="number" class=" quantity col" value="1">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   </li>
   `;
@@ -226,32 +223,48 @@ function addItemToCart(name, price, imgSrc) {
   delProduct();
   uppdatePrice();
 }
+
 $(() => {
   var htmls = listCart.map((listCart, index) => {
     return `
-    <li class="nav-item item">
-    <div class="row m-0 align-items-center">
-      <button type="button" class="close border rounded-circle"><b
-      class="icon-close fs-3">&times;</b></button>
-      <div class="col-4">
-        <a href="" class="d-block p-2">
-          <img src="${listCart.image}" alt="" class="img-product img-fluid">
-        </a>
+    <li class="nav-item item row m-0 align-items-center">
+      <div class="col-4 p-0">
+          <a href="" class="d-block p-2">
+              <img src="${listCart.image}" alt="" class="img-product img-fluid">
+          </a>
       </div>
       <div class="col-8 caption">
-        <div class="title">${listCart.name}</div>
-        <div class="d-flex bottom">
-          <div class="d-flex align-items-center">$<span class="price">${listCart.price}</span></div>
-          <input type="number" class="quantity" value="1">
-        </div>
+          <div class="row">
+              <div class="mb-4 col-12">
+                  <div class="row">
+                      <div class="col title ">
+                          ${listCart.name}
+                      </div>
+                      <div class="col text-end">
+                          <button type="button" class=" close fs-5 btn btn-danger">REMOVE</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="row px-3">
+                      <div class="col">$<span class="price">${listCart.price}</span>
+                      </div>
+                      <div class="col">
+                          <div class="row nice-number">
+                              <input type="number" class="quantity col" value="1">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-  </li>
+    </li>
     `;
   });
   $("#items").append(htmls);
   amountCart();
   delProduct();
+  quantity();
   uppdatePrice();
 });
 amountCart = () => {

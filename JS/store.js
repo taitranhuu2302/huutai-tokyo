@@ -1,6 +1,6 @@
 let product = [];
 $.ajax({
-  url: "../db.json",
+  url: "./db.json",
   success: (res) => {
     product = res.product;
     renderDefault();

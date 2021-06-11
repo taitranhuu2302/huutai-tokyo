@@ -1,6 +1,6 @@
 let product;
 $.ajax({
-  url: "../db.json",
+  url: "./db.json",
   success: (res) => {
     product = res.product;
     render();
@@ -16,7 +16,6 @@ function addProduct() {
 }
 
 render = () => {
-  var index = 0;
   var htmls = product.map((product, index) => {
     index++;
     if (index < 9) {

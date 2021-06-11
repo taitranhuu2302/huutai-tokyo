@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 
     <link rel="stylesheet" href="./CSS/base.css">
@@ -67,7 +67,7 @@
                                 <a href="./index.html"><img id="logo" src="./Image/header-logo.png" alt=""></a>
                             </div>
                             <div class="col-lg-6 d-none d-lg-block header-mid-search">
-                                <div class="form-group form-search">
+                                <div class="form-group">
                                     <input id="my-search" class="form-control" type="text" name="" placeholder="Tìm kiếm điện thoại, máy tính">
                                     <button class="btn btn-search" id="search-mid"><i
                                             class="far fa-search"></i></button>
@@ -77,7 +77,7 @@
                             </div>
                             <div class="col col-lg-3 col-sm-3 header-mid-cart d-flex align-items-center justify-content-end justify-content-lg-between justify-content-sm-end me-3 me-xl-0">
                                 <button type="button" class="btn login d-lg-block d-none" data-bs-toggle="modal" data-bs-target="#modal-login">Đăng nhập</button>
-                                <button type="button" class="btn" id="icon-cart">
+                                <button type="button" class="btn" id="icon-cart" data-bs-toggle="offcanvas" data-bs-target="#cart-dropdown" aria-controls="offcanvasWithBothOptions">
                                     <i class="fas fa-shopping-bag"></i>
                                     <p class="tag-cart d-flex justify-content-center align-items-center rounded-circle">
                                         <span id="tag-cart-amount"></span>
@@ -92,8 +92,7 @@
                     <div class="container h-100">
                         <div class="d-flex h-100 align-items-center justify-content-center">
                             <ul class="nav">
-                                <li class="nav-item"><a href="./index.html" class="nav-link text-uppercase">Trang
-                                        chủ</a>
+                                <li class="nav-item"><a href="index.html" class="nav-link text-uppercase">Trang chủ</a>
                                 </li>
                                 <li class="nav-item nav-dropdown">
                                     <a href="./store.html" class="nav-link text-uppercase">Cửa hàng</a>
@@ -116,22 +115,28 @@
                     </div>
                 </div>
             </div>
-            <div id="cart-dropdown">
-                <div class="cart-title d-flex align-items-center px-4 mb-5">
-                    <div class="display-5 fw-bold">Shopping cart</div>
-                    <button type="button" onclick="" id="cart-close" class="btn-close" aria-label="Close"></button>
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="cart-dropdown" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header cart-title">
+                    <h5 class="offcanvas-title fs-1 fw-bold" id="offcanvasWithBothOptionsLabel">Shopping cart</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <ul class="nav" id="items">
 
-                </ul>
+                <div class="offcanvas-body">
+                    <ul class="nav" id="items">
+
+                    </ul>
+                </div>
                 <div class="total-price">
-                    <div class="pay ms-4 mt-5">
+                    <div class="pay ms-4">
                         <strong>Tổng tiền: </strong> <span class="pay-price">0</span>
                     </div>
-                    <a href="./cart.html" type="button" class="btn btn-pay fw-bold w-75 ms-5 mt-4">
+                    <a href="./cart.html" type="button" class="btn btn-pay fw-bold mt-3">
                         Thanh toán
                     </a>
                 </div>
+            </div>
+            <div id="cart-dropdown">
+
             </div>
             <div id="menu-mb">
                 <div class="modal">
@@ -491,6 +496,8 @@
         <script src="./JS/sweetalert2.all.min.js"></script>
         <script src="./JS/product.js"></script>
         <script src="./JS/header.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 

@@ -33,10 +33,34 @@
   height: 100%;
 }
 
-#content .table #list-item .item .quantity {
-  position: relative;
-  width: 36px;
-  height: 36px;
+#content .table #list-item .item .nice-number .quantity {
+  background-color: #fff;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid #dddd;
+  margin: 0 1px;
+  width: 30px;
+}
+
+#content .table #list-item .item .nice-number .quantity:hover {
+  border: none;
+  border: 1px solid hotpink;
+  color: #fff;
+  background-color: hotpink;
+}
+
+#content .table #list-item .item .nice-number button {
+  border: none;
+  background-color: #141414;
+  width: 31px;
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #dddd;
+}
+
+#content .table #list-item .item .nice-number button:hover {
+  border: 1px solid hotpink;
+  background-color: hotpink;
 }
 
 #content .input-sale {

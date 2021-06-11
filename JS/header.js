@@ -75,17 +75,10 @@ uppdatePrice = function () {
 };
 uppdatePrice();
 quantity = () => {
-  var quantityInput = listItemsCart.getElementsByClassName("quantity");
-  for (var i = 0; i < quantityInput.length; i++) {
-    var input = quantityInput[i];
-    input.addEventListener("change", (event) => {
-      var quantity = event.target;
-      if (isNaN(quantity.value) || quantity.value <= 0) {
-        quantity.value = 1;
-      }
-      uppdatePrice();
-    });
-  }
+  $("#items .quantity").niceNumber();
+  $(".nice-number button").click(() => {
+    uppdatePrice();
+  });
 };
 quantity();
 
@@ -196,7 +189,7 @@ function addItemToCart(name, price, imgSrc) {
                     </div>
                     <div class="col">
                         <div class="row">
-                            <input type="number" class=" quantity col" value="1">
+                            <input type="number" class="quantity col" min="1" value="1">
                         </div>
                     </div>
                 </div>
@@ -250,8 +243,8 @@ $(() => {
                       <div class="col">$<span class="price">${listCart.price}</span>
                       </div>
                       <div class="col">
-                          <div class="row nice-number">
-                              <input type="number" class="quantity col" value="1">
+                          <div class="row">
+                              <input type="number" class="quantity col" min="1" value="1">
                           </div>
                       </div>
                   </div>

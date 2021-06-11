@@ -52,39 +52,35 @@ uppdatePrice = () => {
 };
 uppdatePrice();
 quantity = () => {
-  var quantityInput = document.getElementsByClassName("quantity");
-  for (var i = 0; i < quantityInput.length; i++) {
-    var input = quantityInput[i];
-    input.addEventListener("change", (event) => {
-      var quantity = event.target;
-      if (isNaN(quantity.value) || quantity.value <= 0) {
-        quantity.value = 1;
-      }
-      uppdatePrice();
-    });
-  }
+  $("#list-item .quantity").niceNumber({
+    autoSize: false,
+  });
+  $(".nice-number button").click(() => {
+    uppdatePrice();
+  });
 };
 quantity();
-
 autoRender = () => {
   var htmls = listCart.map((listCart, index) => {
     return `
       <tr class="item align-middle">
-          <td scope="row" class="d-none d-md-table-cell">${index + 1}</td>
-          <td class="img ">
+          <td scope="row" class="d-none text-center d-md-table-cell">${
+            index + 1
+          }</td>
+          <td class="img text-end">
               <img src="${listCart.image}" class="img-src img-fluid" alt="">
               
           </td>
-          <td class="text-center">
+          <td class="text-start">
             <span class="ms-3 name-product">${listCart.name}</span>
           </td>
           <td  class="d-none d-md-table-cell">
               $<span class="price-first">${listCart.price}</span>
           </td>
           <td class="text-center">
-              <input type="number" class="quantity shadow-none" value="1">
+              <input type="number" min="1" class="quantity shadow-none" value="1">
           </td>
-          <td class="d-none d-md-table-cell">
+          <td class="d-none d-md-table-cell text-center">
               $<span class="price"></span>
           </td>
           <td  class="d-none d-md-table-cell">
@@ -267,3 +263,27 @@ $(() => {
     }, 1000);
   });
 });
+// Rest Input Cart
+uppdatePrice1 = function () {
+  var items = document.querySelectorAll("#items .item");
+  var totalPrice = document.querySelector(
+    "#cart-dropdown .total-price .pay .pay-price"
+  );
+  var total = 0;
+  items.forEach((e) => {
+    var quantity = e.getElementsByClassName("quantity")[0].value;
+    var price = e.getElementsByClassName("price")[0].innerHTML;
+    var priceN = parseFloat(price);
+    total += priceN * quantity;
+  });
+  totalPrice.innerText = "$" + total.toFixed(2);
+};
+uppdatePrice1();
+quantity = () => {
+  uppdatePrice1();
+  $("#items .quantity").niceNumber();
+  $(".nice-number button").click(() => {
+    uppdatePrice1();
+  });
+};
+quantity();

@@ -232,6 +232,33 @@
                             margin-left: 41px;
                         }
                     }
+                    .nice-number {
+                        .quantity {
+                            background-color: #fff;
+                            outline: none;
+                            border-radius: 6px;
+                            border: 1px solid #dddd;
+                            margin: 0 1px;
+                            &:hover {
+                                border: none;
+                                border: 1px solid hotpink;
+                                color: #fff;
+                                background-color: hotpink;
+                            }
+                        }
+                        button {
+                            border: none;
+                            background-color: #141414;
+                            width: 31px;
+                            color: #fff;
+                            border-radius: 6px;
+                            border: 1px solid #dddd;
+                            &:hover {
+                                border: 1px solid hotpink;
+                                background-color: hotpink;
+                            }
+                        }
+                    }
                 }
                 .price {
                     font-size: 16px;

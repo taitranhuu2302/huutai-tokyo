@@ -63,40 +63,29 @@
   font-size: 16px;
 }
 
-.body-1 .body-1-content .content-left .filter .around-price input {
-  width: 100px;
-  height: 30px;
-  font-size: 16px;
+.body-1 .body-1-content .content-left .filter .around-price .irs-line, .body-1 .body-1-content .content-left .filter .around-price .irs-bar {
+  height: 20px;
 }
 
-.body-1 .body-1-content .content-left .filter .around-price input::-webkit-input-placeholder {
-  font-size: 16px;
-  color: #cdcdcd;
+.body-1 .body-1-content .content-left .filter .around-price .irs-bar, .body-1 .body-1-content .content-left .filter .around-price .irs-single {
+  background-color: #141414;
 }
 
-.body-1 .body-1-content .content-left .filter .around-price input:-ms-input-placeholder {
-  font-size: 16px;
-  color: #cdcdcd;
+.body-1 .body-1-content .content-left .filter .around-price .irs-single::before {
+  border-top-color: #141414;
 }
 
-.body-1 .body-1-content .content-left .filter .around-price input::-ms-input-placeholder {
-  font-size: 16px;
-  color: #cdcdcd;
+.body-1 .body-1-content .content-left .filter .around-price .irs-handle {
+  height: 25px;
 }
 
-.body-1 .body-1-content .content-left .filter .around-price input::placeholder {
-  font-size: 16px;
-  color: #cdcdcd;
+.body-1 .body-1-content .content-left .filter .around-price .irs-min, .body-1 .body-1-content .content-left .filter .around-price .irs-max, .body-1 .body-1-content .content-left .filter .around-price .irs-single {
+  font-size: 14px;
+  top: -5px;
 }
 
-.body-1 .body-1-content .content-left .filter .around-price input:focus {
-  outline: none;
-}
-
-.body-1 .body-1-content .content-left .filter .around-price .connect {
-  width: 20px;
-  height: 1px;
-  background-color: #999;
+.body-1 .body-1-content .content-left .filter .btn-filter {
+  background-color: #141414;
 }
 
 .body-1 .body-1-content .content-left .content-left-title {

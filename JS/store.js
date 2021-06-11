@@ -157,10 +157,10 @@ onChange = () => {
 };
 onChange();
 $(".btn-filter").click(() => {
-  var valMin = $(".value-min").val();
-  var valMax = $(".value-max").val();
+  var valMin = 0;
+  var valMax = parseInt($(".irs-single").text());
   document.getElementById("product-items").innerHTML = "";
-  var htmls = product.map((product, index) => {
+  var htmls = product.map((product) => {
     if (product.price > valMin && product.price < valMax) {
       return `
       <div class="col-lg-4 col-md-6 col-sm-6 col-6 product-item" data-aos="fade-right" data-aos-duration="2500">
@@ -194,4 +194,9 @@ $(".btn-filter").click(() => {
   });
   $("#product-items").append(htmls);
   addProduct();
+});
+$(".js-range-slider").ionRangeSlider({
+  min: 0,
+  max: 1000,
+  from: 550,
 });

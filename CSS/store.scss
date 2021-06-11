@@ -62,23 +62,31 @@
         .content-left {
             .filter {
                 .around-price {
-                    input {
-                        width: 100px;
-                        height: 30px;
-                        font-size: 16px;
-                        &::placeholder {
-                            font-size: 16px;
-                            color: #cdcdcd;
+                    .irs {
+                        &-line,
+                        &-bar {
+                            height: 20px;
                         }
-                        &:focus {
-                            outline: none;
+                        &-bar,
+                        &-single {
+                            background-color: #141414;
+                        }
+                        &-single::before {
+                            border-top-color: #141414;
+                        }
+                        &-handle {
+                            height: 25px;
+                        }
+                        &-min,
+                        &-max,
+                        &-single {
+                            font-size: 14px;
+                            top: -5px;
                         }
                     }
-                    .connect {
-                        width: 20px;
-                        height: 1px;
-                        background-color: #999;
-                    }
+                }
+                .btn-filter {
+                    background-color: #141414;
                 }
             }
             .content-left-title {

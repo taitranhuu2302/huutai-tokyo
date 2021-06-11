@@ -54,7 +54,7 @@ const oc = {
     this.navOpen();
   },
 };
-oc.cartRun();
+// oc.cartRun();
 
 //add to shopping cart
 // Udapte Price

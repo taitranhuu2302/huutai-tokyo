@@ -343,29 +343,6 @@
   width: 80%;
 }
 
-#header #menu-mb {
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  overflow-x: hidden;
-  background-color: #fff;
-  z-index: 111;
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  white-space: nowrap;
-}
-
-#header #menu-mb #menu-close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  z-index: 102;
-}
-
 #header #menu-mb .form-group {
   width: 100%;
   display: -webkit-box;
@@ -405,7 +382,7 @@
 
 #header #menu-mb .form-group button {
   position: absolute;
-  right: 31px;
+  right: 50px;
   top: 32px;
 }
 
@@ -421,6 +398,11 @@
   font-weight: 400;
   text-decoration: none;
   color: #333;
+}
+
+#header #menu-mb .list-group .accordion-button:not(.collapsed)::after {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 #modal-login .modal-dialog .modal-content {

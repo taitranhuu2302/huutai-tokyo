@@ -132,6 +132,7 @@ delClicked = function () {
   amountCart();
 };
 delProduct();
+
 // Add to Cart Event btn
 function addProduct() {
   var btnProduct = document.getElementsByClassName("caption-btn");
@@ -404,10 +405,25 @@ search = () => {
 
 $(() => {
   var listItem = document.getElementsByClassName("list-item");
-  for (const item of listItem) {
-    item.addEventListener("click", (event) => {
-      thiss = event.target.innerText;
-      return localStorage.setItem("switch", thiss);
+  var a = document.getElementsByClassName("portfolio-item");
+  for (const item1 of a) {
+    item1.addEventListener("click", () => {
+      var item2 = item1.getElementsByClassName("name-portfolio")[0].innerText;
+      var itemUp = item2.toUpperCase();
+      localStorage.setItem("switch", itemUp);
     });
   }
+  for (const item of listItem) {
+    item.addEventListener("click", (event) => {
+      var thiss = event.target.innerText;
+      var itemUp = thiss.toUpperCase();
+      return localStorage.setItem("switch", itemUp);
+    });
+  }
+  $("#search-mid").click(() => {
+    var searchValue = $("#my-search").val();
+    var valueUp = searchValue.toUpperCase();
+    localStorage.setItem("switch", valueUp);
+    window.open("./store.html");
+  });
 });

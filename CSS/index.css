@@ -126,10 +126,6 @@
      object-fit: cover;
 }
 
-#product-portfolio .portfolio-items .portfolio-item .portfolio-item-caption {
-  text-transform: uppercase;
-}
-
 #product-portfolio .portfolio-items .portfolio-item .portfolio-item-caption h4 {
   font-size: 17px;
 }

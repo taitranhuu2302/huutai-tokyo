@@ -25,7 +25,7 @@ render = () => {
           <div class="p-3">
               <a href="${product.addressLink}" class="item-img">
                   <img src="${product.image1}" alt="" class="img">
-                  <span class="tag">${product.tagSale}</span>
+                  <span class="tag">${product.tag}</span>
                   <button class="btn"><i class="fas fa-heart"></i></button>
                   <span class="quick-view">Quick View</span>
               </a>

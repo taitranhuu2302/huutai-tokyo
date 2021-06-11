@@ -2,14 +2,6 @@ var item = document.getElementById("list-item");
 var items = item.getElementsByClassName("item");
 var index = parseInt($(".quantity").val());
 listCartNew = [];
-$(() => {
-  $(".up").click(() => {
-    $(".quantity").val(index++);
-  });
-  $(".down").click(() => {
-    $(".quantity").val(index--);
-  });
-});
 deleteProduct = () => {
   var button = document.getElementsByClassName("btn-remove");
   for (let i = 0; i < button.length; i++) {

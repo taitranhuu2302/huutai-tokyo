@@ -137,7 +137,7 @@ renderDetail = (tag) => {
                   <img src="${product.image1}" alt="" class="img img-1">
                   <img src="${product.image2}" alt="" class="img img-2">
               </div>
-              <span class="tag">-36%</span>
+              <span class="tag">${product.tag}</span>
               <button class="btn"><i class="fas fa-heart"></i></button>
               <span class="quick-view">Quick View</span>
           </a>

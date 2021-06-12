@@ -433,3 +433,8 @@ $(() => {
     window.open("./store.html");
   });
 });
+
+$(() => {
+  $("#items").sortable();
+  $("#items").disableSelection();
+});

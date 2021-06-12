@@ -1,4 +1,10 @@
 let product = [];
+$(".js-range-slider").ionRangeSlider({
+  min: 0,
+  max: 1000,
+  from: 550,
+});
+
 $.ajax({
   url: "./db.json",
   success: (res) => {
@@ -7,6 +13,7 @@ $.ajax({
     addProduct();
   },
 });
+
 function addProduct() {
   var btnProduct = document.getElementsByClassName("caption-btn");
   for (var i = 0; i < btnProduct.length; i++) {
@@ -36,10 +43,10 @@ renderDefault = () => {
       break;
     default:
       render(product);
+
       break;
   }
 };
-
 renderCategory = (tag) => {
   var htmls = product.map((product) => {
     if (product.tagCategory.toUpperCase() === tag) {
@@ -76,7 +83,6 @@ renderCategory = (tag) => {
   $("#product-items").append(htmls);
 };
 
-const listDefault = product.slice();
 render = (list) => {
   var htmls = list.map((list) => {
     return `
@@ -110,25 +116,26 @@ render = (list) => {
   });
   $("#product-items").append(htmls);
 };
-// render(product);
 sortPriceDecrease = () => {
-  var sort = product.sort((a, b) => {
+  var listSort = [...product];
+  listSort.sort((a, b) => {
     return b.price - a.price;
   });
-  render(sort);
+  render(listSort);
 };
 sortPriceAscending = () => {
-  var sort = product.sort((a, b) => {
+  var listSort = [...product];
+  listSort.sort((a, b) => {
     return a.price - b.price;
   });
-  render(sort);
+  render(listSort);
 };
 
 document.getElementById("my-select").addEventListener("change", (event) => {
   var value = event.target.value;
   if (value == "select-1") {
     document.getElementById("product-items").innerHTML = "";
-    render(listDefault);
+    render(product);
   }
   if (value == "select-5") {
     document.getElementById("product-items").innerHTML = "";
@@ -194,9 +201,4 @@ $(".btn-filter").click(() => {
   });
   $("#product-items").append(htmls);
   addProduct();
-});
-$(".js-range-slider").ionRangeSlider({
-  min: 0,
-  max: 1000,
-  from: 550,
 });

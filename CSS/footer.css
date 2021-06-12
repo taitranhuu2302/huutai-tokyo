@@ -1,11 +1,12 @@
 #footer .footer-top {
   background-color: #000;
-  color: white;
+  color: #fff;
   font-size: 16px;
 }
 
 #footer .footer-top .list-group-item {
   background-color: #000;
+  color: #fff;
 }
 
 #footer .footer-top .footer-top-2 img {

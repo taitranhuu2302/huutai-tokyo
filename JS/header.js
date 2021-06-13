@@ -1,5 +1,18 @@
 window.onscroll = () => {
-  mySticky();
+  // HEADER STICKY
+  var headerTop = $("#header-top").outerHeight();
+  var headerSticky = $("#header-sticky");
+  var headerMid = $("#wrapper-header-mid");
+  var headerLogo = $("#logo");
+  if (window.pageYOffset > headerTop) {
+    headerSticky.css("top", "0px");
+    headerLogo.css({ width: "105px", transition: "width .8s" });
+    headerMid.css({ height: "70px", transition: "height .5s" });
+  } else {
+    headerSticky.css({ top: "" });
+    headerLogo.css({ width: "151px", transition: "width .8s" });
+    headerMid.css({ height: "101px", transition: "height .5s" });
+  }
 };
 AOS.init();
 var cart = document.getElementById("cart-dropdown");
@@ -15,25 +28,6 @@ $.ajax({
   },
 });
 
-// sticky header
-mySticky = () => {
-  const headerTop = document.getElementById("header-top");
-  var sticky = headerTop.offsetTop || headerTop.offsetHeight;
-  var headerSticky = document.getElementById("header-sticky");
-  var headerMid = document.getElementById("wrapper-header-mid");
-  var logo = document.getElementById("logo");
-  if (window.pageYOffset >= sticky) {
-    headerSticky.style.top = "0px";
-    logo.style.width = "105px";
-    logo.style.transition = "width .8s";
-    headerMid.style.height = "70px";
-  } else {
-    headerSticky.style.top = "";
-    logo.style.width = "151px";
-    logo.style.transition = "width .8s";
-    headerMid.style.height = "101px";
-  }
-};
 // open close
 const oc = {
   navClose: () => {
@@ -59,7 +53,6 @@ const oc = {
 //add to shopping cart
 // Udapte Price
 uppdatePrice = function () {
-  var item = document.getElementById("items");
   var items = document.querySelectorAll("#items .item");
   var totalPrice = document.querySelector(
     "#cart-dropdown .total-price .pay .pay-price"
